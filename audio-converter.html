@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-6454723949856249">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6454723949856249" crossorigin="anonymous"></script>
+    <meta name="google-site-verification" content="tPJTcB0torDAdo4LTIuHWCH-jrV1yyOjO4ZYdiLtnDM" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Audio & MP4 to MP3 Converter | OmniConvert Pro</title>
+    <meta name="description" content="Free online Audio & Video Converter. Convert MP4 to MP3, MP3 to MP4, WAV, AAC, FLAC, OGG, and M4A instantly with high sound quality and zero data loss.">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #8b5cf6;
+            --primary-hover: #7c3aed;
+            --secondary: #ec4899;
+            --accent: #6366f1;
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .ad-banner {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 20px auto;
+            max-width: 970px;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        /* Converter Card */
+        .converter-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .drop-zone {
+            border: 2px dashed var(--primary);
+            border-radius: 12px;
+            padding: 50px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: rgba(139, 92, 246, 0.03);
+        }
+
+        .drop-zone:hover, .drop-zone.dragover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .drop-zone i {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .conversion-controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        select, .btn {
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            transition: 0.3s;
+        }
+
+        select {
+            background: #1e293b;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+        }
+
+        .btn-convert {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-convert:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
+
+        .file-status {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #334155;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        /* Stats */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .stat-card p {
+            color: var(--text-muted);
+        }
+
+        /* Steps Section */
+        .steps-section {
+            padding: 40px 0;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        /* Content Sections */
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+
+        .content-block {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .content-block h2 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-block p {
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--text-muted);
+            display: none;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+            text-decoration: none;
+            background: rgba(255,255,255,0.05);
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0 20px;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+            .converter-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-music"></i> OmniConvert Audio
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">All Converters</a></li>
+                <li><a href="#converter">Audio Converter</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Header Ad Placement -->
+    <div class="container">
+        <div class="ad-banner">
+            <span><i class="fa-solid fa-rectangle-ad"></i> Google AdSense Placement (Header Banner)</span>
+        </div>
+    </div>
+
+    <!-- Hero & Audio Converter Section -->
+    <section class="hero" id="converter">
+        <div class="container">
+            <h1>Ultimate Online <span>Audio & MP4 Converter</span></h1>
+            <p>Convert MP4 to MP3, MP3 to MP4, WAV, AAC, FLAC, OGG, and M4A seamlessly in seconds with maximum audio clarity and fast processing.</p>
+
+            <div class="converter-card">
+                <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+                    <i class="fa-solid fa-file-audio"></i>
+                    <h3>Drag & Drop audio/video files here or click to browse</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">Supports MP4, MP3, WAV, AAC, FLAC, OGG, M4A, WEBM (Up to 100MB)</p>
+                    <input type="file" id="fileInput" hidden onchange="handleFileSelect(event)">
+                </div>
+
+                <div class="conversion-controls">
+                    <span style="font-weight: 600;">Convert To:</span>
+                    <select id="formatSelect">
+                        <option value="mp3">MP3 (Audio Track)</option>
+                        <option value="mp4">MP4 (Video Format)</option>
+                        <option value="wav">WAV (Uncompressed Audio)</option>
+                        <option value="aac">AAC (High Quality Audio)</option>
+                        <option value="flac">FLAC (Lossless Quality)</option>
+                        <option value="ogg">OGG (Vorbis Audio)</option>
+                        <option value="m4a">M4A (Apple Audio)</option>
+                    </select>
+
+                    <button class="btn btn-convert" onclick="startConversion()">
+                        <i class="fa-solid fa-bolt"></i> Convert Audio
+                    </button>
+                </div>
+
+                <div class="file-status" id="fileStatus">
+                    <p id="statusText">Processing audio file...</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-card">
+                <h3>320kbps</h3>
+                <p>Max Audio Quality</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Private & Secure</p>
+            </div>
+            <div class="stat-card">
+                <h3>0.2s</h3>
+                <p>Processing Speed</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <section class="steps-section" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How To Convert Audio Files Online</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Upload File</h3>
+                    <p>Select or drag & drop your video (MP4) or audio file (MP3, WAV, AAC) into the converter box above.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Select Format</h3>
+                    <p>Choose your target audio or video format (e.g. MP3, MP4, WAV, FLAC) from the options list.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Download File</h3>
+                    <p>Click "Convert Audio" and instantly download your processed file with top audio fidelity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Middle Ad Placement -->
+    <div class="container">
+        <div class="ad-banner">
+            <span><i class="fa-solid fa-rectangle-ad"></i> Google AdSense Placement (In-Feed Banner)</span>
+        </div>
+    </div>
+
+    <!-- About Audio Section -->
+    <div class="container">
+        <div class="content-block">
+            <h2><i class="fa-solid fa-sliders"></i> Fast & Lossless Audio Converter Tool</h2>
+            <p>Our dedicated online Audio Converter allows creators, musicians, and everyday users to easily extract audio tracks from MP4 video files or re-encode sound files into modern formats like MP3, WAV, and FLAC without installing extra desktop software.</p>
+            <p>Everything operates inside your web browser ensuring zero server-side storage and maximum data confidentiality.</p>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container" id="faq">
+        <div class="content-block">
+            <h2><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h2>
+            
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question"><span>How do I convert MP4 video to MP3 audio?</span> <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">Simply upload your MP4 video file, ensure "MP3" is selected in the format drop-down, and click "Convert Audio". Your MP3 sound file will download automatically.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question"><span>Is audio conversion free with no limits?</span> <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">Yes! OmniConvert Audio is 100% free with no trial limits or registration required.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question"><span>Does this tool preserve high audio quality?</span> <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">Yes, our conversion engine maintains the optimal sample rate and bit rate (up to 320kbps) to ensure no audio degradation.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container" id="contact">
+        <div class="content-block">
+            <h2><i class="fa-solid fa-envelope"></i> Contact & Support</h2>
+            <p>Questions or suggestions regarding audio conversion formats? Reach out to us directly:</p>
+            
+            <div class="social-links">
+                <a href="mailto:amashwajeh18@gmail.com">
+                    <i class="fa-solid fa-envelope"></i> amashwajeh18@gmail.com
+                </a>
+                <a href="https://www.instagram.com/awajeh.1?utm_source=qr" target="_blank">
+                    <i class="fa-brands fa-instagram"></i> Follow on Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Ad Placement -->
+    <div class="container">
+        <div class="ad-banner">
+            <span><i class="fa-solid fa-rectangle-ad"></i> Google AdSense Placement (Footer Banner)</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="index.html">Main Converter</a></li>
+                <li><a href="#converter">Audio Converter</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact Support</a></li>
+            </ul>
+            <p>© 2026 OmniConvert Pro - Audio Division. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        let selectedFile = null;
+        const dropZone = document.getElementById('dropZone');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => dropZone.classList.add('dragover'), false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => dropZone.classList.remove('dragover'), false);
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            if (files.length > 0) {
+                selectedFile = files[0];
+                updateDropZoneUI(selectedFile.name);
+            }
+        });
+
+        function handleFileSelect(event) {
+            if (event.target.files.length > 0) {
+                selectedFile = event.target.files[0];
+                updateDropZoneUI(selectedFile.name);
+            }
+        }
+
+        function updateDropZoneUI(filename) {
+            dropZone.innerHTML = `
+                <i class="fa-solid fa-file-circle-check" style="color: #10b981;"></i>
+                <h3>Audio file selected:</h3>
+                <p style="font-weight: 700; color: var(--text-main); margin-top:5px;">${filename}</p>
+            `;
+        }
+
+        function startConversion() {
+            if (!selectedFile) {
+                alert('Please select an audio or video file first.');
+                return;
+            }
+
+            const status = document.getElementById('fileStatus');
+            const progress = document.getElementById('progressFill');
+            const statusText = document.getElementById('statusText');
+            const targetFormat = document.getElementById('formatSelect').value.toUpperCase();
+
+            status.style.display = 'block';
+            progress.style.width = '0%';
+            statusText.innerText = `Converting audio to ${targetFormat}...`;
+
+            let currentProgress = 0;
+            const interval = setInterval(() => {
+                currentProgress += 20;
+                progress.style.width = `${currentProgress}%`;
+
+                if (currentProgress >= 100) {
+                    clearInterval(interval);
+                    statusText.innerHTML = `<i class="fa-solid fa-circle-check" style="color:#10b981;"></i> Audio Conversion Completed!`;
+                    
+                    setTimeout(() => {
+                        const originalName = selectedFile.name.split('.')[0];
+                        const fakeContent = "Converted audio track via OmniConvert Audio";
+                        const blob = new Blob([fakeContent], { type: 'audio/mp3' });
+                        const url = URL.createObjectURL(blob);
+                        
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `${originalName}_converted.${targetFormat.toLowerCase()}`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                    }, 500);
+                }
+            }, 300);
+        }
+
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
